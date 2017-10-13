@@ -18,4 +18,12 @@ public class CalculatorTest
 		assertEquals(2, Calculator.Add("2"));
 		assertEquals(205, Calculator.Add("205"));
 	}
+
+	@Test
+	public void testTwoNumbers()
+	{
+		assertEquals(2, Calculator.Add("1,1"));
+		assertEquals(1, Calculator.Add("0,1"));
+		assertEquals(210, Calculator.Add("102,108"));
+	}
 }

@@ -14,7 +14,16 @@ public class Calculator
 			{
 				return toInt(numbers);
 			}
-			return -1;
+			else
+			{
+				String[] twoNumbers = numbers.split(",");
+				int total = 0;
+				for (String number : twoNumbers)
+				{
+					total += toInt(number);
+				}
+				return total;
+			}
 		}
 	}
 
