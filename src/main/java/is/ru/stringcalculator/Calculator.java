@@ -12,9 +12,14 @@ public class Calculator
 		{
 			if (!numbers.contains(","))
 			{
-				return Integer.parseInt(numbers);
+				return toInt(numbers);
 			}
 			return -1;
 		}
+	}
+
+	private static int toInt(String number)
+	{
+		return Integer.parseInt(number);
 	}
 }
