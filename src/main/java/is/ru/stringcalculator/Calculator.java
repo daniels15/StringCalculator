@@ -10,7 +10,11 @@ public class Calculator
 		}
 		else
 		{
-			return 1;
+			if (!numbers.contains(","))
+			{
+				return Integer.parseInt(numbers);
+			}
+			return -1;
 		}
 	}
 }
