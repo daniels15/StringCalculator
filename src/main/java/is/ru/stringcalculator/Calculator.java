@@ -10,13 +10,13 @@ public class Calculator
 		}
 		else
 		{
-			if (!numbers.contains(","))
+			if (!numbers.contains(",") && !numbers.contains("\n"))
 			{
 				return toInt(numbers);
 			}
 			else
 			{
-				String[] nums = numbers.split(",");
+				String[] nums = numbers.split("[,\n]");
 				return sum(nums);
 			}
 		}

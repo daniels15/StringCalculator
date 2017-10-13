@@ -34,4 +34,12 @@ public class CalculatorTest
 		assertEquals(12, Calculator.Add("0,1,4,7"));
 		assertEquals(237, Calculator.Add("102,108,5,10,12"));
 	}
+
+	@Test
+	public void testNewLine()
+	{
+		assertEquals(2, Calculator.Add("1\n1"));
+		assertEquals(12, Calculator.Add("0\n1,4,7"));
+		assertEquals(237, Calculator.Add("102,108\n5\n10,12"));
+	}
 }
