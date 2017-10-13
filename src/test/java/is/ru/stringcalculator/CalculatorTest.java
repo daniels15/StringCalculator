@@ -26,4 +26,12 @@ public class CalculatorTest
 		assertEquals(1, Calculator.Add("0,1"));
 		assertEquals(210, Calculator.Add("102,108"));
 	}
+
+	@Test
+	public void testManyNumbers()
+	{
+		assertEquals(4, Calculator.Add("1,1,2"));
+		assertEquals(12, Calculator.Add("0,1,4,7"));
+		assertEquals(237, Calculator.Add("102,108,5,10,12"));
+	}
 }

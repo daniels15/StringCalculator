@@ -16,8 +16,8 @@ public class Calculator
 			}
 			else
 			{
-				String[] twoNumbers = numbers.split(",");
-				return sum(twoNumbers);
+				String[] nums = numbers.split(",");
+				return sum(nums);
 			}
 		}
 	}
