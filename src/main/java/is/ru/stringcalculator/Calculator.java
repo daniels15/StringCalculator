@@ -17,12 +17,7 @@ public class Calculator
 			else
 			{
 				String[] twoNumbers = numbers.split(",");
-				int total = 0;
-				for (String number : twoNumbers)
-				{
-					total += toInt(number);
-				}
-				return total;
+				return sum(twoNumbers);
 			}
 		}
 	}
@@ -30,5 +25,15 @@ public class Calculator
 	private static int toInt(String number)
 	{
 		return Integer.parseInt(number);
+	}
+
+	private static int sum(String[] nums)
+	{
+		int total = 0;
+		for (String number : nums)
+		{
+			total += toInt(number);
+		}
+		return total;
 	}
 }
