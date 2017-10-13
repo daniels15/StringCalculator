@@ -12,6 +12,11 @@ public class Calculator
 		{
 			if (!numbers.contains(",") && !numbers.contains("\n"))
 			{
+				if (numbers.contains("-"))
+				{
+					System.out.print("Negatives not allowed: " + numbers);
+					throw new IllegalArgumentException("Negatives not allowed: " + numbers);
+				}
 				return toInt(numbers);
 			}
 			else

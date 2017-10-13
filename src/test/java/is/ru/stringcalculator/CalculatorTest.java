@@ -41,5 +41,12 @@ public class CalculatorTest
 		assertEquals(2, Calculator.Add("1\n1"));
 		assertEquals(12, Calculator.Add("0\n1,4,7"));
 		assertEquals(237, Calculator.Add("102,108\n5\n10,12"));
+
+	}
+
+	@Test(expected=IllegalArgumentException.class)
+	public void testOneNumberNegative()
+	{
+		Calculator.Add("-1");
 	}
 }
