@@ -10,7 +10,16 @@ public class Calculator
 		}
 		else
 		{
-			String[] nums = numbers.split("[,\n]");
+			String delimiter = "";
+			if (numbers.startsWith("//"))
+			{
+				String[] delimiterSplit = numbers.split("\n", 2);
+				delimiter = delimiterSplit[0];
+				delimiter = delimiter.replace("//", "");
+				numbers = delimiterSplit[1];
+			}
+			
+			String[] nums = numbers.split("[" + delimiter + ",\n]");
 			checkNegatives(nums);
 			return sum(nums);
 		}

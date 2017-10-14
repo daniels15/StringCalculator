@@ -67,4 +67,13 @@ public class CalculatorTest
 	{
 		assertEquals(0, Calculator.Add("1001"));
 	}
+
+	@Test
+	public void testCustomDelimiter()
+	{
+		assertEquals(3, Calculator.Add("//;\n1;2"));
+		assertEquals(1, Calculator.Add("//;\n1"));
+		assertEquals(11, Calculator.Add("//;\n1,2;3\n5"));
+		assertEquals(11, Calculator.Add("//x\n1,2x3\n5"));
+	}
 }
