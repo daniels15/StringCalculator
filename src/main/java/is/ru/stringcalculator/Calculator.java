@@ -10,19 +10,9 @@ public class Calculator
 		}
 		else
 		{
-			if (!numbers.contains(",") && !numbers.contains("\n"))
-			{
-				String[] nums = new String[1];
-				nums[0] = numbers;
-				checkNegatives(nums);
-				return sum(nums);
-			}
-			else
-			{
-				String[] nums = numbers.split("[,\n]");
-				checkNegatives(nums);
-				return sum(nums);
-			}
+			String[] nums = numbers.split("[,\n]");
+			checkNegatives(nums);
+			return sum(nums);
 		}
 	}
 
