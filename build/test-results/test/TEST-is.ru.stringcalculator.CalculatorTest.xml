@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-10-13T23:53:49" hostname="DESKTOP-HNN7JLQ" time="0.003">
+<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-10-14T00:25:43" hostname="DESKTOP-HNN7JLQ" time="0.004">
   <properties/>
   <testcase name="testManyNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
   <testcase name="testOneNumberNegative" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testEmptyString" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testNewLine" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
-  <testcase name="testTwoNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
-  <testcase name="testOneNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
-  <system-out><![CDATA[Negatives not allowed: -1]]></system-out>
+  <testcase name="testManyNumbersNegative" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
+  <testcase name="testTwoNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
+  <testcase name="testOneNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
+  <system-out><![CDATA[Negatives not allowed: -1Negatives not allowed: -3,-5,]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

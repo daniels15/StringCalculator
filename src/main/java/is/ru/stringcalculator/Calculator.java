@@ -22,6 +22,7 @@ public class Calculator
 			else
 			{
 				String[] nums = numbers.split("[,\n]");
+				checkNegatives(nums);
 				return sum(nums);
 			}
 		}
@@ -40,5 +41,24 @@ public class Calculator
 			total += toInt(number);
 		}
 		return total;
+	}
+
+	private static void checkNegatives(String[] nums)
+	{
+		String negatives = "";
+		for (String number : nums)
+		{
+			if (number.contains("-"))
+			{
+				negatives += number;
+				negatives += ",";
+			}
+		}
+
+		if (!negatives.equals(""))
+		{
+			System.out.print("Negatives not allowed: " + negatives);
+			throw new IllegalArgumentException("Negatives not allowed: " + negatives);
+		}
 	}
 }

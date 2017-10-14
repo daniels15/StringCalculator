@@ -49,4 +49,10 @@ public class CalculatorTest
 	{
 		Calculator.Add("-1");
 	}
+
+	@Test(expected=IllegalArgumentException.class)
+	public void testManyNumbersNegative()
+	{
+		Calculator.Add("1,-3\n-5");
+	}
 }
