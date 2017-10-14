@@ -12,11 +12,9 @@ public class Calculator
 		{
 			if (!numbers.contains(",") && !numbers.contains("\n"))
 			{
-				if (numbers.contains("-"))
-				{
-					System.out.print("Negatives not allowed: " + numbers);
-					throw new IllegalArgumentException("Negatives not allowed: " + numbers);
-				}
+				String[] nums = new String[1];
+				nums[0] = numbers;
+				checkNegatives(nums);
 				return toInt(numbers);
 			}
 			else
@@ -50,14 +48,14 @@ public class Calculator
 		{
 			if (number.contains("-"))
 			{
-				negatives += number;
 				negatives += ",";
+				negatives += number;
 			}
 		}
 
 		if (!negatives.equals(""))
 		{
-			System.out.print("Negatives not allowed: " + negatives);
+			negatives = negatives.replaceFirst(",", "");
 			throw new IllegalArgumentException("Negatives not allowed: " + negatives);
 		}
 	}
