@@ -55,4 +55,11 @@ public class CalculatorTest
 	{
 		Calculator.Add("1,-4\n-5,2,-100");
 	}
+
+	@Test
+	public void testManyNumbersOver1000()
+	{
+		assertEquals(1, Calculator.Add("1,1001"));
+
+	}
 }
