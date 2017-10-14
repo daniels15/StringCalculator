@@ -60,6 +60,11 @@ public class CalculatorTest
 	public void testManyNumbersOver1000()
 	{
 		assertEquals(1, Calculator.Add("1,1001"));
+	}
 
+	@Test
+	public void testOneNumberOver1000()
+	{
+		assertEquals(0, Calculator.Add("1001"));
 	}
 }

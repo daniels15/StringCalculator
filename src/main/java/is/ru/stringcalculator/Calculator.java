@@ -15,7 +15,7 @@ public class Calculator
 				String[] nums = new String[1];
 				nums[0] = numbers;
 				checkNegatives(nums);
-				return toInt(numbers);
+				return sum(nums);
 			}
 			else
 			{
